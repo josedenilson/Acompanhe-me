@@ -1,0 +1,8 @@
+import re
+prog = re.compile("^((A|B|C)(1|2|3|4))+$")
+name = ["A1B2", "A1B", "B1C4", "1A1B5", "A1B7","A2B1","AA2B1","A2A2B1B2"]
+# Match names.
+for element in name:
+ m = prog.match(element)
+if m:
+ print(m.group())
