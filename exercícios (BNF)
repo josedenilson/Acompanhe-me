@@ -1,0 +1,20 @@
+from nltk import CFG
+import nltk
+
+grammar = nltk.CFG.fromstring("""
+Expresão -> Número |A|S|M|D 
+A ->Expresão "+" Expresão 
+S ->Expresão "-" Expresão
+M ->Expresão "*" Expresão
+D ->Expresão "/" Expresão
+Número -> Digito|Digito Número
+Digito ->"0"|"1"|"2"|"3"|"4"|"5"
+""")
+print(grammar.start())  # imprime o inicio da gramatica
+print(grammar.productions())  # imprime as regras do produto
+print(grammar.productions()[0].lhs())  # imprime o lado esquerdo da primeira regra de producao
+
+tokens = "1 + 3 * 5".split()
+cp = nltk.ChartParser(grammar)
+for tree in cp.parse(tokens):
+    print(tree)
