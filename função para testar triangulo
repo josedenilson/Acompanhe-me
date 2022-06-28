@@ -1,0 +1,20 @@
+
+# Simples função, ela  apenas testar se é um triagulo ou não.
+
+# definição
+def is_a_triangle(a, b, c):
+
+# lógica para retornar a condição de ser ou não triangulo
+    return a + b > c and b + c > a and c + a > b
+
+# aqui o usuário começa a digitar
+
+a = float(input('Entre com o primeiro valor de comprimento : '))
+b = float(input('Entre com um segundo valor de comprimento: '))
+c = float(input('Entre com um terceirovvalor de comprimento: '))
+
+# teste
+if is_a_triangle(a, b, c):
+    print('Sim, pode ser um triangulo.')
+else:
+    print('Não,isso não é um triangulo.')
