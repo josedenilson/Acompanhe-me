@@ -11,9 +11,9 @@ for i in range(tabuleiro.shape[0]):
 # as cores do tabuleiro
     mapa_de_cores = ListedColormap(['#000000','#ebecd0'])
 
-    # transforma o tabuleiro amedida que clica no X de sair
+# transforma o tabuleiro amedida que clica no X de sair
     plt.matshow(tabuleiro, cmap=mapa_de_cores)
     plt.xticks([])
     plt.yticks([])
-    # mostra o tabuleiro
+ # mostra o tabuleiro
     plt.show()
