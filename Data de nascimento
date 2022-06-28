@@ -1,0 +1,24 @@
+# Execício para calcular a data de nascimento.
+
+
+from datetime import datetime
+# aqui o usuário vai didgitar dia,mês,ano de nascomento
+ano_nasc = int(input('Digite o ano de nascimento com quatro digitos:  '))
+mes_nasc = int(input('Digite o mês do seu nascimento com dois digitos: '))
+dia_nasc = int(input('Digite o dia do seu nascimento com dois digitos:  '))
+
+#declaração das datas digitadas
+data_nasc = datetime(ano_nasc, mes_nasc, dia_nasc)
+# data atual vai receber o módulo datetime
+data_atual = datetime.now()
+# subtrair a data atual da data de nascimento
+diff = data_atual - data_nasc
+# diferença dos dias
+dias = diff.days
+#divisaão de ano em dias tomando por base o ano com 365 dias.
+anos, dias = dias // 365, dias % 365
+#divisão do mês em 30 dias
+meses, dias = dias // 30, dias % 30
+#mosta o resultado
+print(f'Você tem {anos} ANOS, {meses} MESES e {dias} DIAS!')
+
