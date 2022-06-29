@@ -1,0 +1,21 @@
+def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+a = float(input('Entre com o primeiro valor de comprimento :\n '))
+b = float(input('Entre com um segundo valor de comprimento: \n'))
+c = float(input('Entre com um terceiro valor de comprimento:\n '))
+
+if is_a_triangle(a,b,c):
+
+    print('Sim, pode ser um Triangulo.')
+    if a == b == c:
+        print('Equilátero')
+        
+    elif a != b != c != a:
+        print('Escaleno')
+    else:
+        print('Isósceles')
+
+else:
+    print('Não,isso não é um Triangulo.')
